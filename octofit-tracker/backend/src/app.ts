@@ -8,6 +8,10 @@ import User from './models/User.js';
 import Workout from './models/Workout.js';
 
 const app = express();
+const codespaceName = process.env.CODESPACE_NAME;
+const baseUrl = codespaceName
+  ? `https://${codespaceName}-8000.app.github.dev`
+  : 'http://localhost:8000';
 
 app.use(cors());
 app.use(express.json());
@@ -24,7 +28,7 @@ const listDocuments = <DocumentType,>(model: Model<DocumentType>, projection?: s
   };
 
 app.get('/api/health', (_request, response) => {
-  response.json({ status: 'ok', service: 'octofit-tracker-api' });
+  response.json({ status: 'ok', service: 'octofit-tracker-api', baseUrl });
 });
 app.get('/api/users', listDocuments(User, '-passwordHash'));
 app.get('/api/teams', listDocuments(Team));
