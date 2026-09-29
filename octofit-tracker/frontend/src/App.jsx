@@ -1,10 +1,16 @@
 import { NavLink, Route, Routes } from 'react-router-dom'
+import Activities from './components/Activities.jsx'
+import Leaderboard from './components/Leaderboard.jsx'
+import Teams from './components/Teams.jsx'
+import Users from './components/Users.jsx'
+import Workouts from './components/Workouts.jsx'
 import './octofit.css'
 
 const sections = [
   { label: 'Overview', path: '/' },
   { label: 'Activities', path: '/activities' },
   { label: 'Teams', path: '/teams' },
+  { label: 'Users', path: '/users' },
   { label: 'Leaderboard', path: '/leaderboard' },
   { label: 'Workouts', path: '/workouts' },
 ]
@@ -58,20 +64,6 @@ function Dashboard() {
   )
 }
 
-function CollectionPage({ title }) {
-  return (
-    <section className="content-section">
-      <p className="eyebrow">OCTOFIT TRACKER</p>
-      <h1>{title}</h1>
-      <div className="empty-state">
-        <span className="empty-state-mark" aria-hidden="true">+</span>
-        <h2>No {title.toLowerCase()} yet</h2>
-        <p>When records are available, they will show up here.</p>
-      </div>
-    </section>
-  )
-}
-
 function App() {
   return (
     <div className="app-shell">
@@ -106,10 +98,11 @@ function App() {
         </header>
         <Routes>
           <Route element={<Dashboard />} path="/" />
-          <Route element={<CollectionPage title="Activities" />} path="/activities" />
-          <Route element={<CollectionPage title="Teams" />} path="/teams" />
-          <Route element={<CollectionPage title="Leaderboard" />} path="/leaderboard" />
-          <Route element={<CollectionPage title="Workouts" />} path="/workouts" />
+          <Route element={<Activities />} path="/activities" />
+          <Route element={<Teams />} path="/teams" />
+          <Route element={<Users />} path="/users" />
+          <Route element={<Leaderboard />} path="/leaderboard" />
+          <Route element={<Workouts />} path="/workouts" />
           <Route element={<Dashboard />} path="*" />
         </Routes>
       </main>
