@@ -1,0 +1,404 @@
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 252px minmax(0, 1fr);
+}
+
+.sidebar {
+  min-height: 100vh;
+  padding: 30px 20px 22px;
+  display: flex;
+  flex-direction: column;
+  background: #173b32;
+  color: #f5f4e9;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: inherit;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 21px;
+  text-decoration: none;
+}
+
+.brand img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.brand-light {
+  display: block;
+  color: #c7d3ba;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 11px;
+  line-height: 1.1;
+}
+
+.nav-caption {
+  margin: 56px 0 12px 12px;
+  color: #a8c0ae;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.main-nav {
+  display: grid;
+  gap: 5px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 43px;
+  padding: 0 12px;
+  border-radius: 5px;
+  color: #d2ded3;
+  font-size: 13px;
+  text-decoration: none;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  background: #2d5648;
+  color: #fffdf4;
+}
+
+.nav-marker {
+  width: 7px;
+  height: 7px;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+}
+
+.nav-item.active .nav-marker {
+  border-color: #e9ad6d;
+  background: #e9ad6d;
+}
+
+.sidebar-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  padding: 17px 2px 0;
+  border-top: 1px solid #426657;
+  font-size: 12px;
+}
+
+.sidebar-footer strong,
+.sidebar-footer small {
+  display: block;
+}
+
+.sidebar-footer small {
+  margin-top: 2px;
+  color: #b8cabe;
+  font-size: 10px;
+}
+
+.profile-avatar {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #df9d61;
+  color: #173b32;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.main-panel {
+  min-width: 0;
+}
+
+.topbar {
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5.5%;
+  border-bottom: 1px solid #e0e5dd;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.topbar-label,
+.connection-status {
+  color: #67766d;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.topbar-label {
+  letter-spacing: 1px;
+}
+
+.connection-status {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.content-section {
+  width: min(100%, 1120px);
+  margin: 0 auto;
+  padding: 48px 5.5% 64px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #9a6440;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.content-section h1 {
+  margin: 0;
+  color: #173b32;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 34px;
+  font-weight: 500;
+}
+
+.date-stamp {
+  margin: 0 0 4px;
+  color: #67766d;
+  font-size: 12px;
+}
+
+.welcome-panel {
+  min-height: 194px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 30px 36px;
+  border-radius: 6px;
+  background: #e7eee3;
+}
+
+.welcome-panel h2 {
+  margin: 0 0 8px;
+  color: #173b32;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 29px;
+  font-weight: 500;
+}
+
+.welcome-panel p:last-child {
+  margin: 0;
+  color: #5d6c62;
+  font-size: 13px;
+}
+
+.welcome-panel img {
+  width: 105px;
+  height: 105px;
+  object-fit: contain;
+}
+
+.metric-row {
+  margin-top: 18px;
+}
+
+.metric-panel {
+  min-height: 134px;
+  display: flex;
+  flex-direction: column;
+  padding: 17px 18px;
+  border: 1px solid #e0e5dd;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.metric-panel span {
+  color: #67766d;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.metric-panel strong {
+  margin: 6px 0 1px;
+  color: #173b32;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 27px;
+  font-weight: 500;
+}
+
+.metric-panel small {
+  color: #8a968e;
+  font-size: 10px;
+}
+
+.setup-note {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+  padding: 20px 0;
+  border-top: 1px solid #e0e5dd;
+}
+
+.setup-note h3 {
+  margin: 0 0 4px;
+  color: #173b32;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.setup-note p {
+  margin: 0;
+  color: #67766d;
+  font-size: 12px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 8px;
+  margin-top: 3px;
+  border-radius: 50%;
+  background: #7b9b62;
+}
+
+.empty-state {
+  margin-top: 26px;
+  padding: 56px 24px;
+  border: 1px dashed #cbd5cb;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.empty-state-mark {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: #e7eee3;
+  color: #416a53;
+  font-size: 22px;
+}
+
+.empty-state h2 {
+  margin: 0 0 6px;
+  color: #173b32;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 21px;
+}
+
+.empty-state p {
+  margin: 0;
+  color: #67766d;
+  font-size: 12px;
+}
+
+@media (max-width: 760px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    min-height: 0;
+    padding: 12px 16px 0;
+  }
+
+  .brand {
+    align-self: flex-start;
+    font-size: 18px;
+  }
+
+  .brand img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .nav-caption,
+  .sidebar-footer {
+    display: none;
+  }
+
+  .main-nav {
+    display: flex;
+    gap: 4px;
+    margin: 12px -16px 0;
+    padding: 0 16px 8px;
+    overflow-x: auto;
+  }
+
+  .nav-item {
+    min-height: 36px;
+    flex: 0 0 auto;
+    gap: 7px;
+    padding: 0 10px;
+    font-size: 11px;
+  }
+
+  .topbar {
+    height: 52px;
+    padding: 0 20px;
+  }
+
+  .topbar-label {
+    font-size: 9px;
+  }
+
+  .content-section {
+    padding: 32px 20px 48px;
+  }
+
+  .content-section h1 {
+    font-size: 29px;
+  }
+
+  .date-stamp {
+    max-width: 115px;
+    text-align: right;
+  }
+
+  .welcome-panel {
+    min-height: 170px;
+    padding: 24px 20px;
+  }
+
+  .welcome-panel h2 {
+    font-size: 24px;
+  }
+
+  .welcome-panel p:last-child {
+    max-width: 250px;
+    line-height: 1.5;
+  }
+
+  .welcome-panel img {
+    width: 72px;
+    height: 72px;
+    margin-left: 8px;
+  }
+}
+
+@media (max-width: 390px) {
+  .welcome-panel img {
+    width: 54px;
+    height: 54px;
+  }
+
+  .welcome-panel {
+    padding: 20px 16px;
+  }
+}
