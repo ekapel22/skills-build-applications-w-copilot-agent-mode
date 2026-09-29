@@ -108,6 +108,7 @@ async function seedDatabase() {
       );
     }
 
+    console.log('Seed the octofit_db database with test data');
     console.log('Seeded users, teams, activities, leaderboard entries, and workouts in octofit_db');
   } finally {
     await mongoose.disconnect();
