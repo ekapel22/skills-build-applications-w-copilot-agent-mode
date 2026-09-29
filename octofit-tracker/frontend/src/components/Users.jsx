@@ -7,5 +7,5 @@ const columns = [
 ]
 
 export default function Users() {
-  return <CollectionTable title="Users" collection="users" columns={columns} />
+  return <CollectionTable title="Users" endpoint="/api/users/" columns={columns} />
 }

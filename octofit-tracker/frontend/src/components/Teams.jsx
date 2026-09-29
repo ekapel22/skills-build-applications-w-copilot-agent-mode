@@ -7,5 +7,5 @@ const columns = [
 ]
 
 export default function Teams() {
-  return <CollectionTable title="Teams" collection="teams" columns={columns} />
+  return <CollectionTable title="Teams" endpoint="/api/teams/" columns={columns} />
 }

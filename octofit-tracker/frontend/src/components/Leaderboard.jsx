@@ -8,5 +8,5 @@ const columns = [
 ]
 
 export default function Leaderboard() {
-  return <CollectionTable title="Leaderboard" collection="leaderboard" columns={columns} />
+  return <CollectionTable title="Leaderboard" endpoint="/api/leaderboard/" columns={columns} />
 }

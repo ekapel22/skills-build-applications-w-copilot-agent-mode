@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { fetchCollection } from './api.js'
 
-function CollectionTable({ title, collection, columns }) {
+function CollectionTable({ title, endpoint, columns }) {
   const [records, setRecords] = useState([])
   const [status, setStatus] = useState('loading')
   const [error, setError] = useState('')
@@ -9,7 +9,7 @@ function CollectionTable({ title, collection, columns }) {
   useEffect(() => {
     const controller = new AbortController()
 
-    fetchCollection(collection, controller.signal)
+    fetchCollection(endpoint, controller.signal)
       .then((items) => {
         setRecords(items)
         setStatus('success')
@@ -21,7 +21,7 @@ function CollectionTable({ title, collection, columns }) {
       })
 
     return () => controller.abort()
-  }, [collection])
+  }, [endpoint])
 
   return (
     <section className="content-section">
@@ -44,7 +44,7 @@ function CollectionTable({ title, collection, columns }) {
             </thead>
             <tbody>
               {records.map((record, index) => (
-                <tr key={record._id ?? record.id ?? `${collection}-${index}`}>
+                <tr key={record._id ?? record.id ?? `${endpoint}-${index}`}>
                   {columns.map((column) => (
                     <td key={column.label}>{column.render ? column.render(record) : record[column.key] ?? '—'}</td>
                   ))}

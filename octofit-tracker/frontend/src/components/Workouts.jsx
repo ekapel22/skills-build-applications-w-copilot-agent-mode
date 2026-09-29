@@ -9,5 +9,5 @@ const columns = [
 ]
 
 export default function Workouts() {
-  return <CollectionTable title="Workouts" collection="workouts" columns={columns} />
+  return <CollectionTable title="Workouts" endpoint="/api/workouts/" columns={columns} />
 }
