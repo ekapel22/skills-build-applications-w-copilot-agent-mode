@@ -1,5 +1,10 @@
 import CollectionTable from './CollectionTable.jsx'
 
+const codespaceName = import.meta.env.VITE_CODESPACE_NAME?.trim()
+const endpoint = codespaceName
+  ? `https://${codespaceName}-8000.app.github.dev/api/activities/`
+  : 'http://localhost:8000/api/activities/'
+
 const columns = [
   { label: 'Activity', key: 'activityType' },
   { label: 'Started', key: 'startedAt' },
@@ -9,5 +14,5 @@ const columns = [
 ]
 
 export default function Activities() {
-  return <CollectionTable title="Activities" endpoint="/api/activities/" columns={columns} />
+  return <CollectionTable title="Activities" endpoint={endpoint} columns={columns} />
 }
