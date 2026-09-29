@@ -4,7 +4,7 @@ This template provides a minimal setup to get React working in Vite with HMR and
 
 ## API configuration
 
-In a GitHub Codespace, define `VITE_CODESPACE_NAME` in `octofit-tracker/frontend/.env.local` so the frontend can reach the API on port 8000:
+`VITE_CODESPACE_NAME` must be defined when running in a GitHub Codespace. Set it in `octofit-tracker/frontend/.env.local` to reach the API on port 8000:
 
 ```dotenv
 VITE_CODESPACE_NAME=your-codespace-name
